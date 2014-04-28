@@ -1,0 +1,1 @@
+!function(c,i){psi=Ψ=function(a,b,j){if(b&&b.call){return(c[a]=c[a]||{})[j=i++]=b,function(){delete c[a][j]}}for(j in a=c[a])a[j](b)}}({},0)

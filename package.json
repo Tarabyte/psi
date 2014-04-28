@@ -1,0 +1,29 @@
+{
+  "name": "psi",
+  "version": "0.0.0",
+  "description": "Twitter sized PubSub library.",
+  "main": "psi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tarabyte/psi.git"
+  },
+  "keywords": [
+    "PubSub",
+    "javascript",
+    "140chars"
+  ],
+  "author": "tarabyte",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tarabyte/psi/issues"
+  },
+  "homepage": "https://github.com/Tarabyte/psi",
+  "devDependencies": {
+    "gulp": "^3.6.2",
+    "gulp-qunit": "^0.3.3",
+    "gulp-size": "^0.3.0"
+  }
+}
