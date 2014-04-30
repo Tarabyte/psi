@@ -2,7 +2,6 @@ module('PubSub');
 
 test('Should be defined', function(){
     ok(Ψ, 'Ψ is defined');
-    ok(psi, 'psi is defined');
 });
 
 test('Ψ behaviour', function() {
@@ -48,4 +47,30 @@ test('No data', function() {
     });
 
     Ψ('some event');    
+});
+
+test('Data with call', function(){
+    var data = {
+        call: 1
+    };
+    Ψ('eventWithCall', function(arg) {
+        equal(arg, data, 'got data');
+    });
+
+    Ψ('eventWithCall', data);
+});
+
+test('event data types', function(){
+    var types = [undefined, null, 0, 1, "", "string", {}, [], [1], {a: 1, b:2}, true, false], i;
+    
+    expect(types.length);
+    
+    Ψ('differentDataTypes', function(data){
+        equal(data, types[i], 'got correct data for:' + types[i]);
+    });
+    
+    types.forEach(function(item, idx){
+        i = idx;
+        Ψ('differentDataTypes', item);
+    });
 });

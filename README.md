@@ -4,7 +4,7 @@
 Twitter sized PubSub library in javascript.
 
 ```javascript
-!function(c,i){psi=Ψ=function(a,b,j){if(b&&b.call){return(c[a]=c[a]||{})[j=i++]=b,function(){delete c[a][j]}}for(j in a=c[a])a[j](b)}}({},0)
+!function(c,i){Ψ=function(a,b,j){a=c[a]=c[a]||{};if('f'==(typeof b)[0])return a[j=i++]=b,function(){delete a[j]};for(j in a)a[j](b)}}({},0)
 ```
 
 Defines global variable Ψ (psi) which acts as a "hybrid" event:
@@ -22,5 +22,3 @@ var unsub = Ψ('eventName', handler); //subscribe
 
 unsub(); //unsubscribe
 ```
-
-For thouse who don't want to enter greek letter `Ψ`, use `psi` instead.
